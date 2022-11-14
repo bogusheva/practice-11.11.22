@@ -1,0 +1,199 @@
+.header {
+  padding: 17px 0;
+  position: relative;
+  &.active {
+    .nav-list {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .burger-btn {
+      span {
+        opacity: 0;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+        top: 19px;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 14px;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include tablet-view {
+      padding: 0 10px;
+    }
+    @include desktop-view {
+      padding: 0 15px;
+    }
+  }
+  .nav-holder {
+    justify-self: flex-start;
+    @include desktop-view {
+      width: calc(100% - 400px);
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .nav-list {
+    background-color: #fff;
+    padding: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-in-out 0.3s;
+
+    @include desktop-view {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -21px;
+    }
+  }
+  .nav-item {
+    text-align: center;
+    text-transform: uppercase;
+    @include tablet-view {
+      font-size: 16px;
+      padding: 5px 0;
+    }
+
+    @include desktop-view {
+      padding: 0 21px;
+    }
+  }
+  .burger-holder {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  .burger-btn {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    @include desktop-view {
+      display: none;
+    }
+
+    span,
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      border-bottom: 2px solid #000;
+      transition: all ease-in-out 0.3s;
+    }
+
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+  }
+}
+.btn-list {
+  display: flex;
+  margin: 0;
+  padding: 0 60px 0 0;
+  flex-wrap: nowrap;
+  list-style: none;
+  justify-content: flex-start;
+  gap: 10px;
+  @include tablet-view {
+    justify-content: flex-end;
+    padding-right: 70px;
+    gap: 20px;
+  }
+  @include desktop-view {
+    justify-content: space-between;
+    gap: 30px;
+    padding-right: 0;
+  }
+}
+.btn {
+  font-weight: $font-weight-bold;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  background-color: $orange;
+  color: $white;
+  border: 1px solid $orange;
+  transition: all ease-in-out 0.3s;
+  font-family: $font-family-second, $font-family-fallback;
+
+  &:hover {
+    background-color: $white;
+    border-color: $hover-button;
+    color: $dark-brown;
+  }
+
+  &.btn-small {
+    width: 60px;
+    padding: 9px 0;
+    @include tablet-view {
+      width: 90px;
+      padding: 9px 7px;
+    }
+    @include desktop-view {
+      width: 110px;
+      padding: 9px;
+    }
+  }
+
+  &.btn-transparent {
+    width: 60px;
+    padding: 9px 0;
+    background-color: $white;
+    border-color: $hover-button;
+    color: $dark-brown;
+    @include tablet-view {
+      width: 90px;
+      padding: 9px 7px;
+    }
+    @include desktop-view {
+      width: 110px;
+      padding: 9px;
+    }
+
+    &:hover {
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: $white;
+    }
+  }
+
+  &.small-btn {
+    font-weight: $font-weight-semi-bold;
+    line-height: 20px;
+    color: $dark-brown;
+  }
+}

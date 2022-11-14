@@ -1,0 +1,31 @@
+@import "./variables";
+@import "./mixin";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: $font-XS;
+  font-weight: $font-weight-medium;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: $brown;
+  text-align: left;
+  font-family: $font-family-main, $font-family-fallback;
+  @include tablet-view {
+    font-size: $font-XXS;
+  }
+}
+a {
+  transition: color ease-in-out 0.3s;
+  color: $dark-brown;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,30 @@
+//Breakpoints for forming queries for different modes: mobile, tablet, desktop
+$width-desktop: 1024px;
+$width-tablet: 768px;
+
+//Basic colors for use across the page
+$white: #fff;
+$orange: #ff9900;
+$brown: #544837;
+$dark-brown: #2f281e;
+$hover-button: #bcd0e5;
+$footer-line: #68b9ef;
+
+//Basic fonts for use across the page
+$font-family-main: "Montserrat";
+$font-family-second: "Poppins";
+$font-family-fallback: sans-serif;
+
+//Basic fonts for use across the page according to design layout
+$font-XXS: 12px;
+$font-XS: 16px;
+$font-S: 20px;
+$font-M: 22px;
+$font-L: 36px;
+$font-XL: 44px;
+
+//Basic fonts-weights for use across the page
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
